@@ -1,0 +1,122 @@
+
+\documentclass[11pt]{article} 
+
+\usepackage[utf8]{inputenc} % set input encoding
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+
+\usepackage[blocks]{authblk}
+
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} 
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+
+
+
+\title{Manual for the Muon g-2 MIDAS DAQ}
+
+
+\author{W.~Gohn}
+\author{T.~Gorringe}
+\author{F.~Han}
+\affil{University of Kentucky}
+
+\author{S.~Ganguly}
+\author{A.~Kochibhotla}
+\affil{University of Illinois}
+
+\author{R.~Chislett}
+\author{T.~Stuttard}
+\affil{University College London}
+
+
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+\section{Installation}
+
+\include{installation.tex}
+
+\section{Running the DAQ}
+
+\include{running.tex}
+
+\section{Event Builder}
+
+\include{eb.tex}
+
+\section{MasterGM2 Frontend}
+
+\include{master.tex}
+
+\section{Calorimeter Frontends}
+
+\include{calo.tex}
+
+\section{Tracker Frontends}
+
+\include{tracker.tex}
+
+\section{Fiber Harp Readout}
+
+\include{fh.tex}
+
+\section{ROME}
+
+\include{rome.tex}
+
+\section{Troubleshooting Tips}
+
+\include{trouble.tex}
+
+\appendix
+
+\section{GPS Setup}
+
+\include{gps.tex}
+
+\section{AMC13 Setup}
+
+\include{amc13.tex}
+
+\end{document}

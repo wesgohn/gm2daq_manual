@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Installation}{2}
+\contentsline {section}{\numberline {3}Running the DAQ}{3}
+\contentsline {section}{\numberline {4}Event Builder}{4}
+\contentsline {section}{\numberline {5}MasterGM2 Frontend}{5}
+\contentsline {section}{\numberline {6}Calorimeter Frontends}{6}
+\contentsline {section}{\numberline {7}Tracker Frontends}{7}
+\contentsline {section}{\numberline {8}Fiber Harp Readout}{8}
+\contentsline {section}{\numberline {9}ROME}{9}
+\contentsline {section}{\numberline {10}Troubleshooting Tips}{10}
+\contentsline {section}{\numberline {A}GPS Setup}{11}
+\contentsline {section}{\numberline {B}AMC13 Setup}{12}
