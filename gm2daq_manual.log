@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 MAR 2016 16:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 MAR 2016 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -559,48 +559,48 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-(./gm2daq_manual.toc)
+(./gm2daq_manual.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+ [1
+
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `gm2daq_manual.toc'.
 
- [1
-
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./inst
-allation.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 2.
-
+ [2] (./installation.tex
 Overfull \hbox (45.72267pt too wide) in paragraph at lines 37--38
 \OT1/cmr/m/n/10.95 also in-stall CUDA. To in-stall CUDA, fol-low the in-struc-t
 ions at https://developer.nvidia.com/cuda-
  []
 
-[2] [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
+[3] [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 111.
+
  (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
 )
-(./running.tex) (./eb.tex) (./master.tex) (./calo.tex) (./tracker.tex)
-(./fh.tex) (./rome.tex) [4]
+(./running.tex [5] [6]) (./eb.tex) (./master.tex) (./calo.tex) (./tracker.tex)
+(./fh.tex) (./rome.tex) [7]
 Overfull \vbox (19.13695pt too high) has occurred while \output is active []
 
 
-[5] (./trouble.tex) (./gps.tex) (./amc13.tex) [6] (./gm2daq_manual.aux) ) 
+[8] (./trouble.tex) (./gps.tex) (./amc13.tex) [9] (./gm2daq_manual.aux) ) 
 Here is how much of TeX's memory you used:
- 4290 strings out of 493315
- 64622 string characters out of 6137904
+ 4292 strings out of 493315
+ 64646 string characters out of 6137904
  136415 words of memory out of 5000000
- 7643 multiletter control sequences out of 15000+600000
- 9258 words of font info for 33 fonts, out of 8000000 for 9000
+ 7644 multiletter control sequences out of 15000+600000
+ 9566 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,10n,43p,416b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,10n,43p,683b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
@@ -609,10 +609,10 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on gm2daq_manual.pdf (6 pages, 98035 bytes).
+Output written on gm2daq_manual.pdf (9 pages, 104616 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 62 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

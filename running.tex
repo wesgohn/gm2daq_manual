@@ -1,1 +1,42 @@
-Instructions for running the DAQ.
+Before starting MIDAS, you must first define an experiment using the exptab file. By default, MIDAS will look for this file at /etc/exptab, but it is possible to put it somewhere else and tell MIDAS how to find it with an environment variable. You can define up to ten experiments in the exptab, with the format "NAME directory user", where NAME is the name of the experiment, the directory is where MIDAS will write the files necessary to define the experiment, and user is the username of the user who can run this experiment. As an example, an exptab file to define three experiments for users bernie, hillary, and donald , would look like.
+
+\begin{verbatim}
+EXP1 /home/bernie/exp bernie
+EXP2 /home/hillary/exp hillary
+EXP3 /home/donald/exp donald
+\end{verbatim}
+
+It is then necessary that each user creates the directory "exp" in their home directory.
+
+To fully run our DAQ software, you need to run three MIDAS programs, and at least two of the programs we compiled in the previous section.
+
+The first program to start is the MIDAS mserver. This is the main server that communicates between MIDAS programs running on different machines. If you are the only user, you can run the mserver under your own username, but we have learned that it works best if run under root, in particular when you have multiple users sharing a machine. One instance of mserver will handle all running experiments. The standard usage is
+
+\begin{verbatim}
+mserver -D
+\end{verbatim}
+
+Next you have to start the MIDAS webserver, mhttpd, which allows the user to control an experiment via a MIDAS web interface. The standard usage is
+
+\begin{verbatim}
+mhttpd -e GM2 --mg 8080 -D
+\end{verbatim}
+
+where the experiment name here is GM2 and you are using port 8080. You must run one instance of mhttpd for each experiment running on a system, and each must use a unique port. Since we typically run behind a firewall, we do not use all of the mhttpd securiy features, but it is possible to replace the mg flag with "\-\-https 8444", which will allow you to set a password for your webserver if desired.
+
+The MIDAS program mlogger writes the data to disk. It requires only that you specify the experiment name, and the rest of it's settings are controlled via the ODB.
+
+\begin{verbatim}
+mlogger -e GM2
+\end{verbatim}
+
+It is also necessary to run the event builder, which assembles data fragments from all specified frontends and combines them into a single event. This program is located in gm2daq/eventbuilderNew. After compiling, start the event builder using
+
+\begin{verbatim}
+./mevb -e GM2 -b BUF
+\end{verbatim}
+
+where again GM2 is the experiment name and BUF is the prefix used to identify each unique event buffer. The event buffers must be defined for each frontend in it's ODB Common block, and they must each start with BUF. For instance, we generally define the buffers as BUF01, BUF02, BUF03, etc.
+
+Finally, start the frontend code for each frontend you are running. As a minimum, you should start MasterGM2 and one other fronend. The usage for these will be discussed in subsequent sections.
+

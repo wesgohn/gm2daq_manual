@@ -4,7 +4,7 @@ The DAQ for muon $g-2$ is based on MIDAS, so it is necessary to first install MI
 First, you will want to use yum to install some of the basic prerequisite packages. Two packages that are required by our DAQ software can be installed by:
 
 \begin{verbatim}
-yum install mysql-devel readline-devel 
+yum install mysql-devel readline-devel zlib-devel
 \end{verbatim}
 
 Next, install all the prerequisites for ROOT:
@@ -88,7 +88,20 @@ cd gm2daq
 git checkout develop
 \end{verbatim}
 
-We are currently using Makefiles for compilation. To compile any portion of the DAQ software, navigate to the desired subdirectory and type "make".
+We are currently using Makefiles for compilation. To compile any portion of the DAQ software, navigate to the desired subdirectory and type "make". The directories requiring compilation for normal $g$-$2$ running with AMC13 readout are
+
+\begin{verbatim}
+gm2daq/eventbuilderNew/
+gm2daq/amc13/amc13StandaloneMAN_2014-05-12/
+gm2daq/frontends/CaloReadoutAMC13/
+gm2daq/frontends/MasterGM2/
+\end{verbatim}
+
+If you also need to simulate data (i.e. you do not have an AMC13 as an input source), also compile
+
+\begin{verbatim}
+gm2daq/frontends/AMC13Simulator/
+\end{verbatim}
 
 \subsection{Environment Setup}
 
