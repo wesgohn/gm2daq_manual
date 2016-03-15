@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 MAR 2016 13:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 MAR 2016 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,9 +448,7 @@ Package tocloft Info: The document has section divisions on input line 44.
 \cftsubtabindent=\skip100
 \cftsubtabnumwidth=\skip101
 )
-(./gm2daq_manual.aux (./installation.tex.aux) (./running.tex.aux) (./eb.tex.aux
-) (./master.tex.aux) (./calo.tex.aux) (./tracker.tex.aux) (./fh.tex.aux)
-(./rome.tex.aux) (./trouble.tex.aux) (./gps.tex.aux) (./amc13.tex.aux))
+(./gm2daq_manual.aux)
 \openout1 = `gm2daq_manual.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -561,124 +559,60 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-(./gm2daq_manual.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 1.
-)
+(./gm2daq_manual.toc)
 \tf@toc=\write3
 \openout3 = `gm2daq_manual.toc'.
 
  [1
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-\openout2 = `installation.tex.aux'.
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./inst
+allation.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+
+Overfull \hbox (45.72267pt too wide) in paragraph at lines 37--38
+\OT1/cmr/m/n/10.95 also in-stall CUDA. To in-stall CUDA, fol-low the in-struc-t
+ions at https://developer.nvidia.com/cuda-
+ []
+
+[2] [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
+)
+(./running.tex) (./eb.tex) (./master.tex) (./calo.tex) (./tracker.tex)
+(./fh.tex) (./rome.tex) [4]
+Overfull \vbox (19.13695pt too high) has occurred while \output is active []
 
 
-No file installation.tex.tex.
-[3
-
-
-]
-\openout2 = `running.tex.aux'.
-
-
-No file running.tex.tex.
-[4
-
-
-]
-\openout2 = `eb.tex.aux'.
-
-
-No file eb.tex.tex.
-[5
-
-
-]
-\openout2 = `master.tex.aux'.
-
-
-No file master.tex.tex.
-[6
-
-
-]
-\openout2 = `calo.tex.aux'.
-
-
-No file calo.tex.tex.
-[7
-
-
-]
-\openout2 = `tracker.tex.aux'.
-
-
-No file tracker.tex.tex.
-[8
-
-
-]
-\openout2 = `fh.tex.aux'.
-
-
-No file fh.tex.tex.
-[9
-
-
-]
-\openout2 = `rome.tex.aux'.
-
-
-No file rome.tex.tex.
-[10
-
-
-]
-\openout2 = `trouble.tex.aux'.
-
-
-No file trouble.tex.tex.
-[11
-
-
-]
-\openout2 = `gps.tex.aux'.
-
-
-No file gps.tex.tex.
-[12
-
-
-]
-\openout2 = `amc13.tex.aux'.
-
-
-No file amc13.tex.tex.
-(./gm2daq_manual.aux (./installation.tex.aux) (./running.tex.aux) (./eb.tex.aux
-) (./master.tex.aux) (./calo.tex.aux) (./tracker.tex.aux) (./fh.tex.aux)
-(./rome.tex.aux) (./trouble.tex.aux) (./gps.tex.aux) (./amc13.tex.aux)) ) 
+[5] (./trouble.tex) (./gps.tex) (./amc13.tex) [6] (./gm2daq_manual.aux) ) 
 Here is how much of TeX's memory you used:
- 4302 strings out of 493315
- 64837 string characters out of 6137904
- 139052 words of memory out of 5000000
- 7636 multiletter control sequences out of 15000+600000
- 8490 words of font info for 30 fonts, out of 8000000 for 9000
+ 4290 strings out of 493315
+ 64622 string characters out of 6137904
+ 136415 words of memory out of 5000000
+ 7643 multiletter control sequences out of 15000+600000
+ 9258 words of font info for 33 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,10n,43p,239b,191s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,10n,43p,416b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/
-local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
-Output written on gm2daq_manual.pdf (12 pages, 60766 bytes).
+local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on gm2daq_manual.pdf (6 pages, 98035 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

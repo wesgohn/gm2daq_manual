@@ -1,9 +1,108 @@
-Your text goes here.
+\subsection{Prerequisites}
+The DAQ for muon $g-2$ is based on MIDAS, so it is necessary to first install MIDAS, as well as other prerequisites, before installing the DAQ software. We will also need to install ROOT, which is a prerequisite for ROME, our data quality monitoring software.
+
+First, you will want to use yum to install some of the basic prerequisite packages. Two packages that are required by our DAQ software can be installed by:
+
+\begin{verbatim}
+yum install mysql-devel readline-devel 
+\end{verbatim}
+
+Next, install all the prerequisites for ROOT:
+
+\begin{verbatim}
+yum install libXll-devel libXpm-devel libXft-devel libXext-devel
+\end{verbatim}
+
+, and you might as well install the optional ROOT packages as well:
+
+\begin{verbatim}
+yum install gcc-gfortran openssl-devel pcre-devel \
+        mesa-libGL-devel glew-devel ftgl-devel mysql-devel \
+        fftw-devel cfitsio-devel graphviz-devel \
+        avahi-compat-libdns_sd-devel libldap-dev python-devel \
+        libxml2-devel gsl-static
+\end{verbatim}
+
+Now, you can install ROOT using your favorite method. I prefer to use git, so execute
+
+\begin{verbatim}
+git clone http://root.cern.ch/git/root.git
+cd root
+git tag -l
+git checkout -b v5-34-08 v5-34-08
+./configure
+make
+\end{verbatim}
+
+If you are using the calorimeter readout code that processes data on the GPU, you must also install CUDA. To install CUDA, follow the instructions at https://developer.nvidia.com/cuda-downloads.
+
+Now, you are ready to install MIDAS and ROME.
+
 
 \subsection{MIDAS Installation}
 
-More text.
+To install MIDAS, first obtain our gm2midas git repository from Redmine.
+
+\begin{verbatim}
+git clone ssh://p-gm2midas@cdcvs.fnal.gov/cvs/projects/gm2midas
+\end{verbatim}
+
+You will need the environment variable MIDASSYS set to the give the path to your midas installation. For example, if your username is daq and you checked out gm2midas in your home directory, you would
+
+\begin{verbatim}
+export MIDASSYS=/home/daq/gm2midas/midas
+\end{verbatim}
+
+Now you go to the directory where your MIDASSYS has been defined, and install midas using
+
+\begin{verbatim}
+cd $MIDASSYS
+gmake
+sudo gmake install
+\end{verbatim}
+
+The last command, "gmake install", is optional and will copy the MIDAS installation to your system (not good on a shared computer, for instance). 
+
+\subsection{ROME Installation}
+
+Since you have already checked out gm2midas, you already have ROME, and it just needs to be compiled (if you did not already checkout gm2midas, refer back to the previous section for instructions on how to do so). You need to set the ROMESYS environment variable to the subdirectory gm2midas/rome, navigate there, and type "make". 
+
+\begin{verbatim}
+export ROMESYS=/home/daq/gm2daq/rome
+cd $ROMESYS
+make
+\end{verbatim}
 
 \subsection{Checking out gm2daq}
 
+Now, to obtain our DAQ code, checkout our git repository
+
+\begin{verbatim}
+git clone ssh://p-gm2daq@cdcvs.fnal.gov/cvs/projects/gm2daq
+\end{verbatim}
+
+If you are a DAQ user, you should be on the master branch, and you only need to compile. If you are a DAQ developer, or you would like to test out the newest "experimental" version of the DAQ softwre, you should checkout the develop branch.
+
+\begin{verbatim}
+cd gm2daq
+git checkout develop
+\end{verbatim}
+
+We are currently using Makefiles for compilation. To compile any portion of the DAQ software, navigate to the desired subdirectory and type "make".
+
 \subsection{Environment Setup}
+
+Our environment is most easily setup using a script called setup.sh that is located in the main gm2daq repository. It is recommended to source that script from your own .bash\_profile file. You may need to edit the values of some of the necessary environment variables if you are running on your own machine. The variables that this script sets up are:
+
+\begin{itemize}
+\item GM2DAQ\_DIR: The location of your gm2daq repository.
+\item ROOTSYS: The location of your root installation.
+\item MIDASSYS: The location of your MIDAS installation.
+\item ROMESYS: The location of your ROME installation.
+\item CACTUS\_ROOT: Where your IPBUS is installed (usually /opt/cactus).
+\item AMC13\_STANDALONE\_ROOT: The location of your AMC13 software.
+\item CUDASYS: Where your CUDA is installed (usually /usr/local/cuda).
+\item PATH: Adds the bin directories corresponding to the variables defined above to your PATH.
+\item LD\_LIBRARY\_PATH: Add the lib directories corresponding to the variables defined above to your LD\_LIBRARY\_PATH.
+\end{itemize}
+
