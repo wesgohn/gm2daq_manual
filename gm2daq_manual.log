@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 MAR 2016 17:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  16 MAR 2016 15:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -588,11 +588,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
 )
 (./running.tex [5] [6]) (./eb.tex) (./master.tex) (./calo.tex) (./tracker.tex)
-(./fh.tex) (./rome.tex) [7]
-Overfull \vbox (19.13695pt too high) has occurred while \output is active []
-
-
-[8] (./trouble.tex) (./gps.tex) (./amc13.tex) [9] (./gm2daq_manual.aux) ) 
+(./fh.tex) (./rome.tex) [7] (./trouble.tex) [8] (./gps.tex) (./amc13.tex)
+[9] (./gm2daq_manual.aux) ) 
 Here is how much of TeX's memory you used:
  4292 strings out of 493315
  64646 string characters out of 6137904
@@ -601,15 +598,15 @@ Here is how much of TeX's memory you used:
  9566 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,10n,43p,683b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/
-local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on gm2daq_manual.pdf (9 pages, 104616 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb>
+Output written on gm2daq_manual.pdf (9 pages, 105277 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
