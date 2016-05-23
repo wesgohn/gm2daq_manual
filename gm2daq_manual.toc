@@ -9,15 +9,15 @@
 \contentsline {section}{\numberline {0.3}Running the DAQ}{4}{section.0.3}
 \contentsline {section}{\numberline {0.4}Event Builder}{6}{section.0.4}
 \contentsline {subsection}{\numberline {0.4.1}Running Event Builder}{6}{subsection.0.4.1}
-\contentsline {subsection}{\numberline {0.4.2}ODB Options}{8}{subsection.0.4.2}
-\contentsline {section}{\numberline {0.5}MasterGM2 Frontend}{8}{section.0.5}
-\contentsline {subsection}{\numberline {0.5.1}Functionality}{8}{subsection.0.5.1}
-\contentsline {subsection}{\numberline {0.5.2}ODB Options}{8}{subsection.0.5.2}
-\contentsline {subsection}{\numberline {0.5.3}Bank Output}{8}{subsection.0.5.3}
-\contentsline {section}{\numberline {0.6}Calorimeter Frontends}{8}{section.0.6}
-\contentsline {subsection}{\numberline {0.6.1}Functionality}{8}{subsection.0.6.1}
-\contentsline {subsection}{\numberline {0.6.2}ODB Options}{8}{subsection.0.6.2}
-\contentsline {subsection}{\numberline {0.6.3}Bank Output}{8}{subsection.0.6.3}
+\contentsline {subsection}{\numberline {0.4.2}ODB Options}{6}{subsection.0.4.2}
+\contentsline {section}{\numberline {0.5}MasterGM2 Frontend}{6}{section.0.5}
+\contentsline {subsection}{\numberline {0.5.1}Functionality}{6}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {0.5.2}ODB Options}{6}{subsection.0.5.2}
+\contentsline {subsection}{\numberline {0.5.3}Bank Output}{6}{subsection.0.5.3}
+\contentsline {section}{\numberline {0.6}Calorimeter Frontends}{6}{section.0.6}
+\contentsline {subsection}{\numberline {0.6.1}Functionality}{6}{subsection.0.6.1}
+\contentsline {subsection}{\numberline {0.6.2}ODB Options}{7}{subsection.0.6.2}
+\contentsline {subsection}{\numberline {0.6.3}Bank Output}{7}{subsection.0.6.3}
 \contentsline {section}{\numberline {0.7}Tracker Frontends}{8}{section.0.7}
 \contentsline {subsection}{\numberline {0.7.1}Functionality}{8}{subsection.0.7.1}
 \contentsline {subsection}{\numberline {0.7.2}ODB Options}{8}{subsection.0.7.2}
@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {0.8.2}ODB Options}{8}{subsection.0.8.2}
 \contentsline {subsection}{\numberline {0.8.3}Bank Output}{8}{subsection.0.8.3}
 \contentsline {section}{\numberline {0.9}ROME}{8}{section.0.9}
-\contentsline {section}{\numberline {0.10}Troubleshooting Tips}{9}{section.0.10}
-\contentsline {section}{\numberline {.1}GPS Setup}{9}{section.Alph0.1}
+\contentsline {section}{\numberline {0.10}Troubleshooting Tips}{8}{section.0.10}
+\contentsline {section}{\numberline {.1}GPS Setup}{8}{section.Alph0.1}
 \contentsline {section}{\numberline {.2}AMC13 Setup}{9}{section.Alph0.2}
 \contentsfinish 

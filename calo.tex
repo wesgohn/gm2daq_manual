@@ -1,5 +1,56 @@
 \subsection{Functionality}
 
+The calorimeter readout frontend is located in the directory gm2daq\/frontends\/CaloReadoutAMC13, and will be displayed with the frontend name "AMC13XX", where XX is an integer corresponding to the index of the $\mu$TCA crate, 01-24 for the calorimeters. 
+
+Usage is:
+
+\begin{verbatim}
+./frontend -e GM2 -h <backend_name> -i <i>
+\end{verbatim}
+
+Where the backend\_name is the hostname of the computer where your MIDAS mserver is running, usually g2be or g2be1, and "i" is a frontend index, 1-24 for the calorimeter systems.
+
 \subsection{ODB Options}
 
+The ODB settings for the CaloReadoutAMC13 frontend are subdivided into Global setting, which control the basic frontend bahaviour, AMC13 settings, used to configure the AMC13 itself, Link01 settings, used to configure the DAQ link between the readout and source, Calorimeter settings for slow control parameters, and settings for each of the 12 Rider slots in the crate.
+
+The global settings are used to set up the frontend for data taking, allowing the user to choose the type of data that will be saved, and how it will be processed. The available options are:
+
 \subsection{Bank Output}
+
+The CaloReadoutAMC13 frontend outputs MIDAS banks with a variety of information, including Raw waveforms, T and Q method derived datasets, and header and trailer information. All of the included banks are summarized in Table.~\ref{tab:banks}. 
+
+\begin{table}
+\begin{tabular}{|l|l|}
+\hline
+Bank Name & Function\\
+\hline
+CBxx & Header information from the AMC13 and Riders for each fill.\\
+CZxx & Trailer information from the AMC13 and Riders for each fill.\\
+CRxx & Raw data, which is often prescaled, so not written for every event.\\
+CTxx & T-method processed islands.\\
+CQxx & Q-method decimated sums.\\
+CHxx & Q-method event-by event summed histograms.\\
+CLxx & Information on timing of the data processing.\\
+\hline
+\end{tabular}
+\caption{\label{tab:banks}The list of banks that can be printed by the CaloReadoutAMC13 frontend. The xx denotes the frontend index of 01-24, which is written into the bank name.}
+\end{table}
+
+The data will come in three fill types, which the CaloReadoutAMC13 will determine from the AMC13 headers. The fill types are muon, laser, or pedestal. For muon fills, the full processing in the GPU is turned on for each event (if the appropriate ODB flag is checked), but for the laser and pedestal types, only the raw data is written. Details of which banks are saved for each fill are given in Table~\ref{tab:fills}.
+
+\begin{table}
+\begin{tabular}{|l|l|c|c|c|c|}
+\hline
+Fill Type & Characteristics & CB,CZ & CT, CQ, CH & CR & CL\\
+\hline
+muon & Single, continuous waveform. & yes & yes & pre-scaled & yes\\
+\hline
+laser & \multicolumn{1}{m{5cm}|}{One or more WFD-chopped waveforms.} & yes & no & yes & yes\\
+\hline
+pedestal & \multicolumn{1}{m{3cm}|}{Raw pedestals} & yes & no & yes & yes\\
+\hline
+\end{tabular}
+\caption{\label{tab:fills}The data saved for each fill type by the CaloReadoutAMC13 frontend.}
+\end{table}
+
