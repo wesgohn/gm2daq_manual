@@ -1,33 +1,33 @@
 \select@language {english}
-\contentsline {section}{\numberline {0.1}Introduction}{2}{section.0.1}
-\contentsline {section}{\numberline {0.2}Installation}{2}{section.0.2}
-\contentsline {subsection}{\numberline {0.2.1}Prerequisites}{2}{subsection.0.2.1}
-\contentsline {subsection}{\numberline {0.2.2}MIDAS Installation}{2}{subsection.0.2.2}
-\contentsline {subsection}{\numberline {0.2.3}ROME Installation}{3}{subsection.0.2.3}
-\contentsline {subsection}{\numberline {0.2.4}Checking out gm2daq}{3}{subsection.0.2.4}
-\contentsline {subsection}{\numberline {0.2.5}Environment Setup}{4}{subsection.0.2.5}
-\contentsline {section}{\numberline {0.3}Running the DAQ}{4}{section.0.3}
-\contentsline {section}{\numberline {0.4}Event Builder}{6}{section.0.4}
-\contentsline {subsection}{\numberline {0.4.1}Running Event Builder}{6}{subsection.0.4.1}
-\contentsline {subsection}{\numberline {0.4.2}ODB Options}{6}{subsection.0.4.2}
-\contentsline {section}{\numberline {0.5}MasterGM2 Frontend}{6}{section.0.5}
-\contentsline {subsection}{\numberline {0.5.1}Functionality}{6}{subsection.0.5.1}
-\contentsline {subsection}{\numberline {0.5.2}ODB Options}{6}{subsection.0.5.2}
-\contentsline {subsection}{\numberline {0.5.3}Bank Output}{6}{subsection.0.5.3}
-\contentsline {section}{\numberline {0.6}Calorimeter Frontends}{6}{section.0.6}
-\contentsline {subsection}{\numberline {0.6.1}Functionality}{6}{subsection.0.6.1}
-\contentsline {subsection}{\numberline {0.6.2}ODB Options}{7}{subsection.0.6.2}
-\contentsline {subsection}{\numberline {0.6.3}Bank Output}{7}{subsection.0.6.3}
-\contentsline {section}{\numberline {0.7}Tracker Frontends}{8}{section.0.7}
-\contentsline {subsection}{\numberline {0.7.1}Functionality}{8}{subsection.0.7.1}
-\contentsline {subsection}{\numberline {0.7.2}ODB Options}{8}{subsection.0.7.2}
-\contentsline {subsection}{\numberline {0.7.3}Bank Output}{8}{subsection.0.7.3}
-\contentsline {section}{\numberline {0.8}Fiber Harp Readout}{8}{section.0.8}
-\contentsline {subsection}{\numberline {0.8.1}Functionality}{8}{subsection.0.8.1}
-\contentsline {subsection}{\numberline {0.8.2}ODB Options}{8}{subsection.0.8.2}
-\contentsline {subsection}{\numberline {0.8.3}Bank Output}{8}{subsection.0.8.3}
-\contentsline {section}{\numberline {0.9}ROME}{8}{section.0.9}
-\contentsline {section}{\numberline {0.10}Troubleshooting Tips}{8}{section.0.10}
-\contentsline {section}{\numberline {.1}GPS Setup}{8}{section.Alph0.1}
-\contentsline {section}{\numberline {.2}AMC13 Setup}{9}{section.Alph0.2}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}Installation}{4}{chapter.2}
+\contentsline {subsection}{\numberline {2.0.1}Prerequisites}{4}{subsection.2.0.1}
+\contentsline {subsection}{\numberline {2.0.2}MIDAS Installation}{5}{subsection.2.0.2}
+\contentsline {subsection}{\numberline {2.0.3}ROME Installation}{5}{subsection.2.0.3}
+\contentsline {subsection}{\numberline {2.0.4}Checking out gm2daq}{5}{subsection.2.0.4}
+\contentsline {subsection}{\numberline {2.0.5}Environment Setup}{6}{subsection.2.0.5}
+\contentsline {chapter}{\numberline {3}Running the DAQ}{7}{chapter.3}
+\contentsline {chapter}{\numberline {4}Event Builder}{9}{chapter.4}
+\contentsline {subsection}{\numberline {4.0.6}Running Event Builder}{9}{subsection.4.0.6}
+\contentsline {subsection}{\numberline {4.0.7}ODB Options}{9}{subsection.4.0.7}
+\contentsline {chapter}{\numberline {5}MasterGM2 Frontend}{10}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.8}Functionality}{10}{subsection.5.0.8}
+\contentsline {subsection}{\numberline {5.0.9}ODB Options}{10}{subsection.5.0.9}
+\contentsline {subsection}{\numberline {5.0.10}Bank Output}{10}{subsection.5.0.10}
+\contentsline {chapter}{\numberline {6}Calorimeter Frontends}{11}{chapter.6}
+\contentsline {subsection}{\numberline {6.0.11}Functionality}{11}{subsection.6.0.11}
+\contentsline {subsection}{\numberline {6.0.12}ODB Options}{11}{subsection.6.0.12}
+\contentsline {subsection}{\numberline {6.0.13}Bank Output}{11}{subsection.6.0.13}
+\contentsline {chapter}{\numberline {7}Tracker Frontends}{13}{chapter.7}
+\contentsline {subsection}{\numberline {7.0.14}Functionality}{13}{subsection.7.0.14}
+\contentsline {subsection}{\numberline {7.0.15}ODB Options}{13}{subsection.7.0.15}
+\contentsline {subsection}{\numberline {7.0.16}Bank Output}{13}{subsection.7.0.16}
+\contentsline {chapter}{\numberline {8}Fiber Harp Readout}{14}{chapter.8}
+\contentsline {subsection}{\numberline {8.0.17}Functionality}{14}{subsection.8.0.17}
+\contentsline {subsection}{\numberline {8.0.18}ODB Options}{14}{subsection.8.0.18}
+\contentsline {subsection}{\numberline {8.0.19}Bank Output}{14}{subsection.8.0.19}
+\contentsline {chapter}{\numberline {9}ROME}{15}{chapter.9}
+\contentsline {chapter}{\numberline {10}Troubleshooting Tips}{16}{chapter.10}
+\contentsline {chapter}{\numberline {A}GPS Setup}{17}{appendix.A}
+\contentsline {chapter}{\numberline {B}AMC13 Setup}{18}{appendix.B}
 \contentsfinish 
