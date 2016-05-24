@@ -1,3 +1,5 @@
+\section{CaloReadoutAMC13}
+
 \subsection{Functionality}
 
 The calorimeter readout frontend is located in the directory gm2daq\/frontends\/CaloReadoutAMC13, and will be displayed with the frontend name "AMC13XX", where XX is an integer corresponding to the index of the $\mu$TCA crate, 01-24 for the calorimeters. 
@@ -15,6 +17,96 @@ Where the backend\_name is the hostname of the computer where your MIDAS mserver
 The ODB settings for the CaloReadoutAMC13 frontend are subdivided into Global setting, which control the basic frontend bahaviour, AMC13 settings, used to configure the AMC13 itself, Link01 settings, used to configure the DAQ link between the readout and source, Calorimeter settings for slow control parameters, and settings for each of the 12 Rider slots in the crate.
 
 The global settings are used to set up the frontend for data taking, allowing the user to choose the type of data that will be saved, and how it will be processed. The available options are:
+
+\subsubsection{Globals}
+
+
+\begin{itemize}
+\item {\bf sync} : Boolean to define if the frontend run synchronously or asynchronously with the trigger.
+\item {\bf TQ methods} : Boolean to turn on T and Q methods in the GPU processing.
+\item {\bf GPU waveform length} : Length of digitized waveform in adc samples.
+\item {\bf GPU island presamples} : Number of adc samples to prepend to each island.
+\item {\bf GPU island postsamples} : Number of adc samples to add to end of each island.
+\item {\bf Calo sum decimation factor} : Factor by which to decimate the Q-method sum.
+\item {\bf raw data store} : Boolean to store raw data.
+\item {\bf raw data prescale} : Prescale for raw data (data will be saved for every Nth event)
+\item {\bf raw data prescale offset} : Number of events to wait before writing raw event..
+\item {\bf histogram data store} : Boolean to turn on histogramming Q-method.
+\item {\bf histogram data flush} : Number of events taken to build histogram before writing to data file.
+\item {\bf histogram data flush offset} : Number of events to wait before writing histogrammed data.
+\item {\bf use AMC13 simulator} : Boolean to turn on simulated data mode. Default is 'n' for running with Rider readout.
+\item {\bf GPU Device ID} : Specifies which internal GPU to access for data processing. 
+\item {\bf island\_option} : Option for T method threshold cut to identify islands. Options are: 0. Periodic island condition, 1. Sum of waveforms for calorimeter, 2. Individual crystal leading edge trigger, 3. Pulse shape weighted cut.
+\item {\bf T method threshold value} : Threshold for T method. It should be negative for negative pulses.
+\item {\bf $+ve(-ve)$ crossing-thres Y(N)} : Polarity of pulse. Y is positive and N is negative.
+\item {\bf pedestal\_option} : 1 computes pedestals in the GPU, and 0 uses a global pedestal.
+\item {\bf T method global pedestal} : Value for pedestal if pedestal\_option is 0. 
+\item {\bf Send to Event Builder} : Boolean to send data to event builder.
+\end{itemize}
+
+\subsubsection{Link01}
+
+\begin{itemize}
+\item {\bf enabled} : Boolean to enable the DAQ link.
+\item {\bf port nr} : Port number on the readout side.
+\item {\bf readout ip} : IP address of the 10 Gb link on the readout computer.
+\item {\bf source port} : Port number on the client side. For the AMC13 the port must be 0x1234 or 4660. 
+\item {\bf source ip} : IP address of your client, \emph{i.e.} the DAQ link on the AMC13.
+\end{itemize}
+
+\subsubsection{AMC13}
+
+\begin{itemize}
+\item {\bf header size (bytes)} : Size of AMC13 header; default is 0x1000.
+\item {\bf amc\_block\_size} : Size of payload block; default is 0x8000.
+\item {\bf tail\_size} : Size of tail data; default is 0x8.
+\item {\bf serialNo} : Serial number of AMC13.
+\item {\bf slot} : Slot in $\mu$TCA crate where AMC13 is located (should be 13).
+\item {\bf usingControlHub} : Boolean to define whether or not Control Hub is used for the AMC13.
+\item {\bf T2ip} : IP address of the T2 FPGA.
+\item {\bf T1ip} : IP address of the T1 FPGA.
+\item {\bf addrTab1} : Path to address table for the Spartan FPGA.
+\item {\bf addrTab2} : Path to address table for the Kintex FPGA.
+\item {\bf enableSoftwareTrigger} : Boolean to enable software trigger. This should only be set if the AMC13 is generating internal triggers. 
+\end{itemize}
+
+\subsubsection{Rider}
+
+There are 12 Rider subdirectories for each of the 12 AMC slots in the $\mu$TCA crate. Each subdirectory has a Board subdirectory and five Channel subdirectories. 
+
+First, under board are the options:
+
+\begin{itemize}
+\item {\bf rider\_enabled} : Boolean to enable the AMC.
+\item {\bf burst\_count} : Sets the burst count on the board. The waveform length will be 8 times this burst count. The default burst count is 70000 to give a 700 $\mu$s waveform.
+\item {\bf ip\_addr}: Currently not used.
+\end{itemize}
+
+Second, under each of the five channel directories:
+
+\begin{itemize}
+\item {\bf enabled} : enable the channel.
+\item {\bf Gain} : Gain for each SiPM.
+\item {\bf Segment index} : unique index for each Rider.
+\end{itemize}
+
+\subsection{CalorimeterSettings}
+
+This directory contains slow control settings for the calorimeter. Currently the settings are only stored here, and must be manually modified and passed to the device.
+
+\begin{itemize}
+\item EEProm
+\item Filter wheel
+\item Bias Voltage1
+\item Bias Voltage2
+\item Bias Voltage3
+\item Bias Voltage4
+\item Temperature
+\end{itemize}
+
+\subsubsection{CaloMap}
+
+The CaloMap directory contains 54 subdirectories, one for each segment. Under each subdirectory there are two entries, which map the segment to a particular rider and channel. The \emph{Rider module} entry should be a number 1-12, and the \emph{Rider channel} entry should be from 1-5.
 
 \subsection{Bank Output}
 
