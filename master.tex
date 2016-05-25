@@ -1,5 +1,33 @@
+\section{/gm2daq/frontends/MasterGM2/}
+
 \subsection{Functionality}
+
+The MasterGM2 frontend controls other frontends in the experiment via RPC calls, sending begin and end of run signals, as well as triggers to synchronous frontends. The triggering mechanism has multiple options, but the typical running mode will use a trigger input to a Meinberg GPS device that will time stamp each fill, and the MasterGM2 frontend will write these timestamps into the TRIG bank.
+
+If the appropriate option is selected in the ODB, this frontend also sends begin of run and end of run commands via IPBus to the FC7 in the CCC $\mu$TCA crate.
 
 \subsection{ODB Options}
 
+The MasterGM2 ODB options are under /Equipment/MasterGM2/Settings/Globals/. The configurable parameters are:
+
+\begin{itemize}
+\item {\bf Trigger source} : The type of trigger used, taken as a string. Possible options are:
+\begin{itemize}
+\item GPS: Takes triggers via an input on a connected Meinberg GPS unit.
+\item PP: Takes triggers via a parallel port input.
+\item Socket: Takes triggers via a tcp socket, configurable via the ODB.
+\item Fake: Generates triggers at a given rate.
+\end{itemize}
+\item {\bf Socket trigger IP addr} : IP address if using socket triggers.
+\item {\bf Socket trigger port} : Port number if using socket trigger.
+\item {\bf Rate} : Data rate if using Fake trigger.
+\item {\bf Readout name} : Base name of the readout frontend. For normal operation, use "AMC13". Do not include index.
+\item {\bf Simulator name}: Base name of simulator (if using). For normal simulator operation, use "AMC13Simulator". Do not include index.
+\item {\bf Send to event builder} : Boolean to choose whether to include MasterGM2 (TRIG) data in built events.
+\item {\bf Verbose} : Boolean to turn on extra print messages.
+\item {\bf CCC} : Boolean to turn on IPBus BOR/EOR signals to the CCC system.
+\end{itemize}
+
 \subsection{Bank Output}
+
+If data is written from the MasterGM2 frontend, it is written in the TRIG bank as DWORDs.
