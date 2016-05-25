@@ -1,1 +1,63 @@
-Troubleshooting tips.
+\section{Troubleshooting}
+
+This section will provide some general tips for troubleshooting the DAQ. We will make an effor to collect some common failure modes here, and provide solutions. 
+
+\subsection{Run does not stop}
+
+In the case when the user has clicked the stop button, and the experiment hangs for several minutes, the run transition can be expediated by using the "stop now" command in odbedit. To execute, run
+
+\begin{verbatim}
+odbedit -e <expname> -c "stop now"
+\end{verbatim}
+
+One should be judicial in using this solution. Sometimes a run stop can be delayed while the event builder and data logger are processing the events remaining in the data buffers, and a "stop now" will throw away that data.
+
+\subsection{Cannot remove frontend}
+
+Sometimes MIDAS will give an error that a particular frontend cannot be removed. This will often happen for instance if you try to stop a frontend that is actively working, or something else causes it to lose it's connection to the mserver. In this case, manually stop the frontend if it is running (go to the terminal or screen and type Ctrl+C).  Then do a clean command in odbedit.
+
+\begin{verbatim}
+odbedit -e <expname> -c clean
+\end{verbatim}
+
+\subsection{ODB recovery}
+
+If your ODB becomes corrupt, you can save it by loading the last good ODB, which is saved in the last.xml file located in your data directory. To recover the ODB, use odbedit with the command
+
+\begin{verbatim}
+odbedit -e <expname> -c "load last.xml"
+\end{verbatim}
+
+You may also find that you want to load the ODB settings from a previous run. You can do this in a similar way, but instead of the last.xml file you should use the .odb file created for the run from which you want to load the settings.
+
+\begin{verbatim}
+odbedit -e <expname> -c "load runXXXX.odb"
+\end{verbatim}
+
+In this case, the old run number will also be loaded into your odb, so you must be careful to manually change the run number when starting your next run. You can change it to any number that has not already been used. If you try running with a previously used run number, that can create problems.
+
+\subsection{Restarting midas}
+
+There is a script under gm2daq/scripts called midas-restart, that should be in your path. To run it, first insure that the script has the correct experiment name defined, and then just type "midas-restart" in any terminal. It will kill all midas processes, remove semaphores, and then restart mserver and mhttpd. You might want to run it twice to be safe.
+
+\subsection{Permission problems}
+
+Sometimes some of the shm files will be owned by root, and you may need to change the ownership to the user who is running the experiment. This is done using the standard chown command, but must be done by a user with root access. The typical usage is
+
+\begin{verbatim}
+chown user.gm2 .FILE.SHM
+\end{verbatim}
+
+\subsection{EXPERTS ONLY: Removing SHM files}
+
+If your midas-restart does not solve your problem, it may be necessary ro remove your SHM files. To do so, first go to your experiment directory. There you can view the SHM files using "ls -a". Depending on the problem, it may be fixed by removing just the .BUFXX.SHM files, and then doing a midas-restart. 
+
+If that does not fix the problem, you may need to also remove the .ODB.SHM file, but that also will clear out your odb. If you need to do this, follow the following steps.
+
+\begin{enumerate}
+\item rm .ODB.SHM.
+\item Use odbedit to load your last.xml file into the odb.
+\item Do a midas-restart
+\end{enumerate}
+
+If these steps still do not solve the problem, it may be necessary to remove the files in /dev/shm/ that correspond to your experiment. This will require root access to the computer you are using. If you are going to do this, make sure you know what you are doing!
