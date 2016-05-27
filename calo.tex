@@ -42,6 +42,7 @@ The global settings are used to set up the frontend for data taking, allowing th
 \item {\bf pedestal\_option} : 1 computes pedestals in the GPU, and 0 uses a global pedestal.
 \item {\bf T method global pedestal} : Value for pedestal if pedestal\_option is 0. 
 \item {\bf Send to Event Builder} : Boolean to send data to event builder.
+\item {\bf Shelf configuration} : Set to rider or ccc.
 \end{itemize}
 
 \subsubsection{Link01}
@@ -88,6 +89,8 @@ Second, under each of the five channel directories:
 \item {\bf enabled} : enable the channel.
 \item {\bf Gain} : Gain for each SiPM.
 \item {\bf Segment index} : unique index for each Rider.
+\item {\bf EEprom} : EEprom for each channel
+\item {\bf Temperature} : SiPM Temperature
 \end{itemize}
 
 \subsection{CalorimeterSettings}
@@ -95,13 +98,11 @@ Second, under each of the five channel directories:
 This directory contains slow control settings for the calorimeter. Currently the settings are only stored here, and must be manually modified and passed to the device.
 
 \begin{itemize}
-\item EEProm
 \item Filter wheel
 \item Bias Voltage1
 \item Bias Voltage2
 \item Bias Voltage3
 \item Bias Voltage4
-\item Temperature
 \end{itemize}
 
 \subsubsection{CaloMap}
