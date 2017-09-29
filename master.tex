@@ -22,7 +22,7 @@ The MasterGM2 ODB options are under /Equipment/MasterGM2/Settings/Globals/. The 
 \item {\bf Socket trigger port} : Port number if using socket trigger.
 \item {\bf Rate} : Data rate if using Fake trigger.
 \item {\bf Readout name} : Base name of the readout frontend. For normal operation, use "AMC13". Do not include index.
-\item {\bf Simulator name}: Base name of simulator (if using). For normal simulator operation, use "AMC13Simulator". Do not include index.
+\item {\bf Simulator name}: Base name of simulator (if using). For normal simulator operation, use "AMC13Simulator". Do not include the index. This will be ignored when using real electronics.
 \item {\bf Send to event builder} : Boolean to choose whether to include MasterGM2 (TRIG) data in built events.
 \item {\bf Verbose} : Boolean to turn on extra print messages.
 \item {\bf CCC} : Boolean to turn on IPBus BOR/EOR signals to the CCC system.
@@ -30,4 +30,4 @@ The MasterGM2 ODB options are under /Equipment/MasterGM2/Settings/Globals/. The 
 
 \subsection{Bank Output}
 
-If data is written from the MasterGM2 frontend, it is written in the TRIG bank as DWORDs.
+Data from the MasterGM2 frontend is is written in the TRIG and GPS0 banks as DWORDs. The GPS0 bank contains the timestamps from the GPS system, and the TRIG bank holds some basic trigger timing info that is computed in the MasterGM2 process.

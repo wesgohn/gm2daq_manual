@@ -1,7 +1,7 @@
 \section{Installation}
 
 \subsection{Prerequisites}
-The DAQ for muon $g-2$ is based on MIDAS, so it is necessary to first install MIDAS, as well as other prerequisites, before installing the DAQ software. We will also need to install ROOT, which is a prerequisite for ROME, our data quality monitoring software.
+The DAQ for muon $g-2$ is based on MIDAS, so it is necessary to first install MIDAS, as well as other prerequisites, before installing the DAQ software. We will also need to install ROOT. Our preferred OS is Scientific Linux Fermi 6.8. The DAQ software is not supported on other platforms.
 
 First, you will want to use yum to install some of the basic prerequisite packages. Two packages that are required by our DAQ software can be installed by:
 
@@ -38,7 +38,7 @@ make
 
 If you are using the calorimeter readout code that processes data on the GPU, you must also install CUDA. To install CUDA, follow the instructions at https://developer.nvidia.com/cuda-downloads.
 
-Now, you are ready to install MIDAS and ROME.
+Now, you are ready to install MIDAS.
 
 
 \subsection{MIDAS Installation}
@@ -65,15 +65,15 @@ sudo gmake install
 
 The last command, "gmake install", is optional and will copy the MIDAS installation to your system (not good on a shared computer, for instance). 
 
-\subsection{ROME Installation}
+%\subsection{ROME Installation}
 
-Since you have already checked out gm2midas, you already have ROME, and it just needs to be compiled (if you did not already checkout gm2midas, refer back to the previous section for instructions on how to do so). You need to set the ROMESYS environment variable to the subdirectory gm2midas/rome, navigate there, and type "make". 
+%Since you have already checked out gm2midas, you already have ROME, and it just needs to be compiled (if you did not already checkout gm2midas, refer back to the previous section for instructions on how to do so). You need to set the ROMESYS environment variable to the subdirectory gm2midas/rome, navigate there, and type "make". 
 
-\begin{verbatim}
-export ROMESYS=/home/daq/gm2daq/rome
-cd $ROMESYS
-make
-\end{verbatim}
+%\begin{verbatim}
+%export ROMESYS=/home/daq/gm2daq/rome
+%cd $ROMESYS
+%make
+%\end{verbatim}
 
 \subsection{Checking out gm2daq}
 
@@ -113,7 +113,7 @@ Our environment is most easily setup using a script called setup.sh that is loca
 \item GM2DAQ\_DIR: The location of your gm2daq repository.
 \item ROOTSYS: The location of your root installation.
 \item MIDASSYS: The location of your MIDAS installation.
-\item ROMESYS: The location of your ROME installation.
+%\item ROMESYS: The location of your ROME installation.
 \item CACTUS\_ROOT: Where your IPBUS is installed (usually /opt/cactus).
 \item AMC13\_STANDALONE\_ROOT: The location of your AMC13 software.
 \item CUDASYS: Where your CUDA is installed (usually /usr/local/cuda).

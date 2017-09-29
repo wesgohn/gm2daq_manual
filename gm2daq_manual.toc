@@ -4,9 +4,8 @@
 \contentsline {section}{\numberline {2.1}Installation}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Prerequisites}{4}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}MIDAS Installation}{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}ROME Installation}{5}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Checking out gm2daq}{5}{subsection.2.1.4}
-\contentsline {subsection}{\numberline {2.1.5}Environment Setup}{6}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.3}Checking out gm2daq}{5}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Environment Setup}{6}{subsection.2.1.4}
 \contentsline {chapter}{\numberline {3}Running the DAQ}{7}{chapter.3}
 \contentsline {chapter}{\numberline {4}Event Builder}{9}{chapter.4}
 \contentsline {section}{\numberline {4.1}/gm2daq/eventBuilderNew/}{9}{section.4.1}
@@ -28,16 +27,15 @@
 \contentsline {subsection}{\numberline {6.1.3}CalorimeterSettings}{15}{subsection.6.1.3}
 \contentsline {subsubsection}{CaloMap}{15}{subsubsection*.6}
 \contentsline {subsection}{\numberline {6.1.4}Bank Output}{15}{subsection.6.1.4}
-\contentsline {chapter}{\numberline {7}ROME}{17}{chapter.7}
-\contentsline {chapter}{\numberline {8}Troubleshooting Tips}{18}{chapter.8}
-\contentsline {section}{\numberline {8.1}Troubleshooting}{18}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Run does not stop}{18}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Cannot remove frontend}{18}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}ODB recovery}{19}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Restarting midas}{19}{subsection.8.1.4}
-\contentsline {subsection}{\numberline {8.1.5}Permission problems}{19}{subsection.8.1.5}
-\contentsline {subsection}{\numberline {8.1.6}EXPERTS ONLY: Removing SHM files}{19}{subsection.8.1.6}
-\contentsline {chapter}{\numberline {A}AMC13 Setup}{21}{appendix.A}
-\contentsline {chapter}{\numberline {B}TCPIP Configuration}{22}{appendix.B}
-\contentsline {section}{\numberline {B.1}TCPIP Optimization}{22}{section.B.1}
+\contentsline {chapter}{\numberline {7}Troubleshooting Tips}{17}{chapter.7}
+\contentsline {section}{\numberline {7.1}Troubleshooting}{17}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Run does not stop}{17}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Cannot remove frontend}{17}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}ODB recovery}{18}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Restarting midas}{18}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.5}Permission problems}{18}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.6}EXPERTS ONLY: Removing SHM files}{18}{subsection.7.1.6}
+\contentsline {chapter}{\numberline {A}AMC13 Setup}{20}{appendix.A}
+\contentsline {chapter}{\numberline {B}TCPIP Configuration}{21}{appendix.B}
+\contentsline {section}{\numberline {B.1}TCPIP Optimization}{21}{section.B.1}
 \contentsfinish 

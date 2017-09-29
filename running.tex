@@ -13,16 +13,16 @@ To fully run our DAQ software, you need to run three MIDAS programs, and at leas
 The first program to start is the MIDAS mserver. This is the main server that communicates between MIDAS programs running on different machines. If you are the only user, you can run the mserver under your own username, but we have learned that it works best if run under root, in particular when you have multiple users sharing a machine. One instance of mserver will handle all running experiments. The standard usage is
 
 \begin{verbatim}
-mserver -D
+mserver -e GM2 -D
 \end{verbatim}
 
 Next you have to start the MIDAS webserver, mhttpd, which allows the user to control an experiment via a MIDAS web interface. The standard usage is
 
 \begin{verbatim}
-mhttpd -e GM2 --mg 8080 -D
+mhttpd -e GM2 --http 8080 -D
 \end{verbatim}
 
-where the experiment name here is GM2 and you are using port 8080. You must run one instance of mhttpd for each experiment running on a system, and each must use a unique port. Since we typically run behind a firewall, we do not use all of the mhttpd securiy features, but it is possible to replace the mg flag with "\-\-https 8444", which will allow you to set a password for your webserver if desired.
+where the experiment name replaces GM2 and you are using port 8080. You must run one instance of mhttpd for each experiment running on a system, and each must use a unique port. Since we typically run behind a firewall, we do not use all of the mhttpd securiy features, but it is possible to replace the \-\-http flag with "\-\-https 8444", which will allow you to set a password for your webserver if desired.
 
 The MIDAS program mlogger writes the data to disk. It requires only that you specify the experiment name, and the rest of it's settings are controlled via the ODB.
 
@@ -36,7 +36,9 @@ It is also necessary to run the event builder, which assembles data fragments fr
 ./mevb -e GM2 -b BUF
 \end{verbatim}
 
-where again GM2 is the experiment name and BUF is the prefix used to identify each unique event buffer. The event buffers must be defined for each frontend in it's ODB Common block, and they must each start with BUF. For instance, we generally define the buffers as BUF01, BUF02, BUF03, etc.
+where again GM2 is replaced by the experiment name and BUF is the prefix used to identify each unique event buffer. The event buffers must be defined for each frontend in it's ODB Common block, and they must each start with BUF. For instance, we generally define the buffers as BUF01, BUF02, BUF03, etc.
 
 Finally, start the frontend code for each frontend you are running. As a minimum, you should start MasterGM2 and one other fronend. The usage for these will be discussed in subsequent sections.
+
+If you are using the CCC system, flaws in the firmware currently enforce that the frontends be started in a particular order. The FC7 is not able to discern the difference between a real problem and a crate that just has not been brought up yet, and it also will not supply a clock signal to crates that have not yet been enabled. Because of this, it is necessary that the MasterGM2 frontend be started first. This brings up the FC7s in the CCC crate and enables the SFP ports that carry the TTC/trigger signals to each crate. Next all readout frontends other than AMC1300 can be started, and then AMC1300 must be started last because otherwise it will think incorrectly that there is an error coming from any crate that has not yet been started, which will cause an error state the the CCC crate's AMC13. 
 

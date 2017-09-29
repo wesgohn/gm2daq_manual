@@ -1,1 +1,140 @@
-How to use ROME.
+
+
+\section{How To Run ROME}
+
+\subsection{Download ROME}
+\begin{itemize}
+\item git clone ssh://p-gm2midas@cdcvs.fnal.gov/cvs/projects/gm2midas
+\item cd gm2midas/rome
+\item  git checkout master
+\end{itemize}
+
+\subsection{Define Environment Variables}
+
+For bash
+\begin{itemize}
+\item export ROMESYS=/directory/where/you/have/rome
+\item export LD\_LIBRARY\_PATH=\$ROOTSYS/lib:\$LD\_LIBRARY\_PATH
+\end{itemize}
+
+For csh, tcsh
+\begin{itemize}
+\item setenv ROMESYS /directory/where/you/have/rome
+\item setenv LD\_LIBRARY\_PATH=\$ROOTSYS/lib:\$LD\_LIBRARY\_PATH
+\end{itemize}
+
+\subsection{Make the ROMEBuilder}
+\begin{itemize}
+\item cd \$ROMESYS
+\item make
+\end{itemize}
+
+\subsection{Check out \& build Calorimeter ROME DQM}
+\begin{itemize}
+\item The first step is to checkout the code from the repository. 
+
+git clone ssh://p-gm2dqm@cdcvs.fnal.gov/cvs/projects/gm2dqm-gm2-dqm
+
+\item cd gm2dqm-gm2-dqm/calo/rome/histoGUI
+
+\item To build: \$ROMESYS/bin/romebuilder.exe -i histoGUI.xml -midas
+
+Use the above command after the first git pull, also after making any change in the histoGUI.xml.
+Otherwise use \bf{make}.
+
+\end{itemize}
+
+\subsection{Run the DQM}
+\subsubsection{Offline}
+\begin{itemize}
+\item ./hguiexample.exe -i romeConfig.xml -pi ./ -r 5450 -m offline
+\item Replace 5450 by your run number.
+\item To run in batch mode:
+\item ./hguiexample.exe -i romeConfig.xml -pi ./ -r 5450 -m offline -b
+\item To run with a specific event number:
+\item ./hguiexample.exe -i romeConfig.xml -pi ./ -r 5450 -m offline -e EVENTNO
+
+\end{itemize}
+
+\subsubsection{Online}
+\begin{itemize}
+\item ./hguiexample.exe -i romeConfig.xml
+\item The analyzer watches the status of the frontend. When you start a run (e.g. from odbedit), the analyzer will start analyzing the online data and ROOT output files will be created.
+
+\item For online running, the following steerable params in /gm2dqm-gm2-dqm/calo/rome/histoGUI/romeConfig.xml must match your MIDAS experiment:
+
+    \item Host - $<mserver host>:<mserver port>$
+    \item Experiment - MIDAS experiment name (as defined in exptab)
+
+\end{itemize}
+
+\subsubsection{Running ROME remotely}
+
+On the server side: in romeConfig.xml:
+The program mode. Must be one of the following : 0 : analyzer; 1 : monitor; 2 : analyzer and monitor;\\
+ 3 : monitor connected to an analyzer.
+
+$<ProgramConfiguration>\\
+ <ProgramMode>0</ProgramMode>\\
+ </ProgramConfiguration>\\
+ <SocketServer>\\
+ <Active>true</Active>\\
+ <PortNumber>9091</PortNumber>\\
+ </SocketServer>$
+ 
+ Run command: ./hguiexample.exe -i romeConfig.xml
+ 
+ On the client side:
+
+$<ProgramConfiguration>$\\
+ $ <ProgramMode>3</ProgramMode>\\
+ </ProgramConfiguration>\\
+  <SocketClient>$\\
+  $ <!-- Host which runs the ROME analyzer. -->\\
+  <Host>g2be1</Host>\\
+  <!-- Port number for the socket connection. -->\\
+  <Port>9091</Port>\\
+  </SocketClient>$\\
+  
+  Run command: ./hguiexample.exe 
+  
+  \subsection{Miscellaneous}
+  \begin{itemize}
+  \item We can specify a range of event numbers from romeConfig.xml.\\
+    $ <EventNumbers></EventNumbers>$
+  \item We can skip events from romeConfig.xml.\\
+    $<EventStep>1</EventStep$
+  \item We can turn on/off tasks/tabs from romeConfig.xml, changing true to false and vice versa.\\
+    
+    $  <Task>\\
+    <TaskName>FillHisto</TaskName>\\
+    <Active>true</Active>\\
+    </Task>\\
+    $
+  \item Update frequency can be changed from romeConfig.xml.\\
+    $<UpdateFrequency>5000</UpdateFrequency>$
+    
+  \item To change the range of a histogram/graph you need to access histoGUI.xml.\\
+    
+    $<Tasks>\\
+    <Task>\\
+    <TaskName>FillHisto</TaskName>\\
+    <Histogram>\\
+    <HistName>h2_Exy</HistName>\\
+    <HistAccumulate>false</HistAccumulate>\\
+    <HistFolderName>CT</HistFolderName>\\
+    <HistArraySize>1</HistArraySize>\\
+    <HistType>TH2F</HistType>\\
+    <HistXLabel>xseg</HistXLabel>\\
+    <HistYLabel>yseg</HistYLabel>\\
+    <HistXNbins>9</HistXNbins>\\
+    <HistXmin>0.5</HistXmin>\\
+    <HistXmax>9.5</HistXmax>\\
+    <HistYNbins>6</HistYNbins>\\
+    <HistYmin>0.5</HistYmin>\\
+    <HistYmax>6.5</HistYmax>\\
+    </Task>\\
+    </Tasks>\\$
+ \end{itemize}
+
+
